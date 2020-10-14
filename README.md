@@ -36,10 +36,6 @@
 
 - host.docker.internal
 
- ## prisma2 with postgreSQL
-
- - `npx prisma init`
-
 ## Understand docker-compose
 
 Docker service is used mostly when you configured the master node with Docker swarm so that docker containers will run in a distributed environment and it can be easily managed.
@@ -83,3 +79,11 @@ docker run -v "directory_name":volume_name docker_image
 
 https://linuxhint.com/docker_cheat_sheet/
 https://blog.container-solutions.com/understanding-volumes-docker
+
+ ## prisma2 with postgreSQL
+
+- prisma-cli: `npm i @prisma/cli`
+ - `npx prisma init`
+ - `npx prisma introspect`
+ - prisma-client: `npm i @prisma/client` first installation automatically run prisma generate. But you need to run generate after added something or re-introspected your db
+ - `npx prisma generate`
