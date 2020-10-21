@@ -87,3 +87,16 @@ https://blog.container-solutions.com/understanding-volumes-docker
  - `npx prisma introspect`
  - prisma-client: `npm i @prisma/client` first installation automatically run prisma generate. But you need to run generate after added something or re-introspected your db
  - `npx prisma generate`
+
+## Change the database schema
+
+- First, adjust the data model in your Prisma schema
+- create a new migration:
+
+```
+npx prisma migrate save --name "add-profile" --experimental
+npx prisma migrate up --experimental
+
+```
+
+- npx prisma generate
