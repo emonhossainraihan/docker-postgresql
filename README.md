@@ -19,6 +19,11 @@
 
 - Dangling image means not associated with a container
 
+```
+// remove all dangled images
+docker rmi $(docker images --filter “dangling=true” -q --no-trunc)
+```
+
 ## Run a postgres container
 
 - `docker run --name postgres_test -e POSTGRES_PASSWORD=<> -d postgres`
